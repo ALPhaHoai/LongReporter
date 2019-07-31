@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Long Reporter</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="action_text_size">Text Size</string>
+    <string name="action_send_app_feedback">Send App Feedback</string>
+    <string name="action_user_email">Email</string>
+    <string name="action_subscribe">Subscribe</string>
+</resources>
