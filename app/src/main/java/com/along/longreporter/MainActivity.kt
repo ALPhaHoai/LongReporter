@@ -8,6 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    val framents: ArrayList<FragmentModel> = ArrayList()
+    var viewPagerAdapter: ViewPagerAdapter? = null
+
+
     var email = "alphahoai@gmail.com"
     var menu: Menu? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,13 +20,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        framents.add(FragmentModel("Home", HomeFragment()))
+        framents.add(FragmentModel("Sport", HomeFragment()))
+        viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, framents)
+        viewpager.adapter = viewPagerAdapter
+        tablayout.setupWithViewPager(viewpager)
+
+//        fab.setOnClickListener { view ->
+            //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                .setAction("Action", null).show()
 
-            email = "ngoclonghk96@gmail.com"
-            menu?.findItem(R.id.action_user_email)?.setTitle(email)
-        }
+//            email = "ngoclonghk96@gmail.com"
+//            menu?.findItem(R.id.action_user_email)?.setTitle(email)
+//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

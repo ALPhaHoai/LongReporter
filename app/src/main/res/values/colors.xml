@@ -3,4 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+    <!--Article-->
+    <color name="recycle_view_background">#f7f7f7</color>
+    <color name="article_description">#666666</color>
+    <color name="article_datetime">#999999</color>
+    <color name="article_comments">#cccccc</color>
+    <color name="article_separate_start">#d3d3d3</color>
+    <color name="article_separate_end">#f2f2f2</color>
 </resources>
